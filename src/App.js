@@ -24,7 +24,7 @@ function App() {
         </div>
         <div className="side-navigation__body">
           { customersData?.map(customer => (
-            <div className={`side-navigation__customer ${customer.id === selectedCustomer.id ? 'selected' : ''}`} key={customer.id} onClick={() => updateSelectedCustomer(customer)}>
+            <div className={`side-navigation__customer ${customer?.id === selectedCustomer?.id ? 'selected' : ''}`} key={customer.id} onClick={() => updateSelectedCustomer(customer)}>
               {customer?.first_name} {customer?.last_name}
             </div>)
           )}
